@@ -1,0 +1,46 @@
+/*etiqueta */
+article, h1{
+    background-color: deepskyblue;
+}
+
+/*va a referenciar a todos los hijos article que tenga section, pero en cualquier nivel */
+
+section article{
+
+    border:2px solid salmon;
+}
+
+/* a los hijos que esten en un primer nivel, primeros hijos */
+
+ul > li {
+    font-family: Arial;
+    color: limegreen;
+} 
+
+nav > ul > ol > li {
+    color: mediumpurple;
+}
+
+/* nombre clase */
+
+.titulo{
+    color:red;
+    text-decoration: underline;
+}
+
+.noticia{
+    background-color: yellow;
+}
+
+.adicional{
+    font-family: impact;
+}
+
+/* nombre id, I que es único, es el equivalente a un dni. identifica un elemento de forma unica */
+
+#importante{
+    background-color: yellowgreen;
+/* solo utilizar "!important" en caso de mucha necesidad */
+    text-decoration: overline; !important;
+}
+
