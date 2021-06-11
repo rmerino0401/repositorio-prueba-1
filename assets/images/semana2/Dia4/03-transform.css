@@ -1,0 +1,13 @@
+.transformacion{
+    width: 200px;
+    height: 100px;
+    background-color: aqua;
+    transform: scaleX(5,2) !important;
+    }
+    
+.tlou2 {
+width: 500px;
+height: 400px;
+transform: skew(25deg,21deg) rotate(30deg) translate3d(300px, 200px, 100px);
+/* translate 3d x,y,z */
+}

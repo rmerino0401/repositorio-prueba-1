@@ -1,0 +1,27 @@
+.filtro {
+    height: 500px;
+    filter: blur(3px) grayscale(1);
+}
+
+.filtro:hover{
+    filter: brightness(3);
+}
+
+.filtro2 {
+    height: 500px;
+    filter: contrast(5);
+
+}
+
+.filtro3 {
+    height: 500px;
+    filter: sepia(89%);
+
+}
+
+.filtrotarea {
+    border-radius: 50%;
+    height: 500px;
+filter: saturate(50%); flood-opacity: 50%
+
+}

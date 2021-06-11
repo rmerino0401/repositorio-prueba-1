@@ -1,0 +1,32 @@
+body{
+    background-image: url('./mountains.jpg');
+    background-size: 200px;  /*ancho */
+    /* repeat x, repeat-y, no-repeat */
+    background-repeat: no-repeat;
+}
+
+.card{
+    width:400px;
+    height:600px;
+    background-image: url('./peru.jpg');
+    background-size: cover;
+    background-position: center;
+/* borde: grosor tipo color */
+/*  */
+    border:5px color red;
+    /* border-radius: 20px */
+    /* border-radius:tl tr br bl */
+    border-radius:10px 20px 40px 80px;
+
+}
+
+.circulo{
+    /* alto y ancho deben ser iguales para que haya un circulo */
+    width:400px;
+    height:400px;
+    border:3px solid darkslateblue;
+    border-radius:50%;
+    /* box-shadow: tamaño posiciónX posicionY color */
+    /* div, h1, p, headers */
+    box-shadow: 5px 4px 4px skyblue;
+}
