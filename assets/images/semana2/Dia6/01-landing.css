@@ -1,0 +1,105 @@
+*{
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+display: flex;
+flex-direction: column;
+}
+
+header{
+display: flex;
+flex-direction: row;
+padding: 10px;
+border: 1px solid blue;
+border-radius: 10px;
+
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+}
+
+h1{
+    color: teal;
+    flex-grow: 5;
+}
+a{
+    text-decoration: none;
+    color: teal;
+    flex-grow: 0.2;
+    margin: 10px;
+
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.banner{
+    margin-top: 30px;
+   margin-bottom: 30px; 
+    border-radius: 25px;
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 96% ;
+    max width: 500px;
+}
+
+.contenedor-medio{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: center;
+    /* justify para centrar el contenido */
+}
+
+.contenido{
+    max-width: 300px;
+    max-height: 300px;
+    border: 1px solid teal;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+    overflow-y: auto;
+
+}
+.imagen-contenido{
+max-width: 250px;
+max height: 250px;
+border-radius: 5px;
+
+}
+
+footer{
+    
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    width: 100%;
+    background-color: teal;
+     
+}
+.contenidos{
+    margin: 5px;
+}
+
+.contenedor-links
+.contenido-footer-1{
+display: flex;
+flex-direction: column;
+flex-grow: 1;
+background-color: teal;
+
+}
+.links-footer>a{
+    text-decoration: none;
+    color: white
+}
