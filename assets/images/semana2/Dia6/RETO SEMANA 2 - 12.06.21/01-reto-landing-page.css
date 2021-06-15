@@ -1,0 +1,616 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap");
+
+*{
+    margin: 0;
+    padding 0%;
+    box-sizing: border-box;
+    font-family: "quicksand"
+}
+
+body {
+    display: flex;
+    flex-direction: column; 
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    background-color: gainsboro;
+    padding: 10px;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    font-variant: inherit;
+}
+
+h1 {
+color: orangered; 
+flex-grow: 5;   
+}
+
+.nav-a {
+    text-decoration: none;
+    text size: 20px;
+    color: #4b4b4b; 
+    flex-grow: 0,2;
+    margin: 10px;
+}
+
+main {
+display: flex;
+flex-direction: column;
+margin: auto;
+width: 100%;
+}
+
+.banner-hero {
+margin-top: 30px;
+margin-bottom: 30px;
+border-radius: 25px;
+margin-left: 2%;
+margin-right: 2%;
+width: 96%;
+max-height: 500px;
+}
+
+.contenedor-servicios {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+
+}
+
+.servicios {
+max-width: 300px;
+max-height: 300px;
+border: 1px solid rgb(13, 88, 88);
+border-radius: 10px;
+margin: 10px;
+padding: 5px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;
+
+}
+
+/* este h4 es codigo de prueba, se puede borrar si no funciona */
+h4{
+    text-align: center;
+    width: 100%;
+    margin: 0px auto;
+    color: white;
+    font-size: 80px;
+    letter-spacing: 5px;
+    top: 50%;
+    position: absolute;
+    margin-top: -40px;
+    
+    text-shadow: -1px -1px 0px color blue);
+      3px 3px 0px cornflowerblue;
+  }  
+  /* Este H4 es código de prueba, se puede borrar si no funciona */
