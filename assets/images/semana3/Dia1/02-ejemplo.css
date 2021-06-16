@@ -1,0 +1,69 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+/* border: 1px solid gray; con esto se genera una cuadricula que bordea el texto de cada menu de la web en el nav*/
+}
+
+/* variables: sirven como referencia se identifican con doble guion "--" */
+
+:root{
+    --color-primario: #fb8f1d;
+}
+
+nav{
+    font-family: 'lato',sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* todos los img (imagenes) */
+nav img{
+    max-width: 40px;
+}
+
+.container{
+    max-width: 900px;
+    margin: 0 auto;
+
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+}
+
+nav li{
+    list-style: none;
+/* margin: arribababajo costados; */
+    margin: 0 20px;
+    cursor:pointer;
+}
+
+nav li :nth-of-type(4){
+    margin-right: 5px;
+}
+
+nav li :nth-of-type(5){
+    margin-left: 5px;
+}
+
+
+button{
+    /* outline: none; */
+}
+
+.btn-register{
+    background-color: var(--color-primario);
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    border: 2px solid var(--color-primario);
+
+}
+
+.btn-login{
+    background-color: white;
+    color: var(--color-primario);
+    padding: 8px;
+}

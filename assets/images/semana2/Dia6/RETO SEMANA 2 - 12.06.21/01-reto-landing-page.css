@@ -15,8 +15,9 @@ body {
 header {
     display: flex;
     flex-direction: row;
-    background-color: gainsboro;
     padding: 10px;
+    border: 10px solid gainsboro;
+    background-color: gainsboro;
     width: 100%;
 }
 
@@ -24,7 +25,6 @@ nav {
     display: flex;
     flex-direction: row;
     font-weight: bold;
-    font-variant: inherit;
 }
 
 h1 {
@@ -61,21 +61,49 @@ max-height: 500px;
     display: flex;
     flex-direction: row;
     margin: auto;
-
+    justify-content: space-between;
+    /* justify-content: center; */
 }
 
-.servicios {
+.servicios1 {
 max-width: 300px;
 max-height: 300px;
-border: 1px solid rgb(13, 88, 88);
-border-radius: 10px;
 margin: 10px;
 padding: 5px;
-
 }
 
+.imagen-servicio-1 {
+        max-width: 50px;
+        max-height: 50px;
+        border-radius:5px;
+      }
 
+.servicios2 {
+    max-width: 300px;
+    max-height: 300px;
+    text-align: center;
+    margin: 10px;
+    padding: 5px;    
+    }
 
+.imagen-servicio-2 {
+        max-width: 50px;
+        max-height: 50px;
+        border-radius:5px;
+      }
+
+.servicios3 {
+    max-width: 300px;
+    max-height: 300px;
+    margin: 10px;
+    padding: 5px;
+    }
+        
+.imagen-servicio-3 {
+        max-width: 50px;
+        max-height:50px;
+        border-radius:5px;
+      }
 
 
 
