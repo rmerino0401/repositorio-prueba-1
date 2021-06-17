@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- nuestros estilos -->
     <link rel="stylesheet" href="./02-ejemplo.css">
     <title>Document</title>
 
@@ -14,7 +16,14 @@
     <div class="container">
 <nav>
     <img src="./assets/images/travel.png" alt="logo">
-    <ul>
+<input type="checkbox" id="check">
+
+<!-- for hace atributo mediante un id a un input-->
+    <label for="check" class="show-menu-btn">
+        <i class="fas fa-bars"></i>
+    </label>
+
+    <ul class="menu">
         <li>home</li>
         <li>destinos</li>
         <li>about</li>
@@ -26,9 +35,33 @@
                 register
             </button>
         </li>
+
+        <li>
+        <label for="check" class="hide-menu-btn">
+            <i class="fas fa-times"></i>
+        </label>
+        </li>
     </ul>
 
 </nav>
+<header>
+<div class="header content">
+    <h1>explora y viaja</h1>
+    <label>buscador de sitios</label>
+    <input type="text"
+    placeholder="ingrese un sitio"
+    >
+    <button id="btn-search">
+        Explorar
+    </button>
+</div>
+<div class="header-img">
+    <img src="./assets/images/img1.png" alt="img header">
+</div>
+
+
+
+</header>
     </div>
 </body>
 </html>
