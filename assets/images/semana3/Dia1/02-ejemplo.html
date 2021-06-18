@@ -1,115 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- nuestros estilos -->
     <link rel="stylesheet" href="./02-ejemplo.css">
     <title>Document</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
-<nav>
-    <img src="./assets/images/travel.png" alt="logo">
-<input type="checkbox" id="check">
+        <nav>
+            <img src="./assets/images/travel.png" alt="logo">
+            <input type="checkbox" id="check">
 
-<!-- for hace atributo mediante un id a un input-->
-    <label for="check" class="show-menu-btn">
-        <i class="fas fa-bars"></i>
-    </label>
+            <!-- for hace atributo mediante un id a un input-->
+            <label for="check" class="show-menu-btn">
+                <i class="fas fa-bars"></i>
+            </label>
 
-    <ul class="menu">
-        <li>home</li>
-        <li>destinos</li>
-        <li>about</li>
-        <li>
-            <button class="btn-login">
-                login
-            </button>
-            <button class="btn-register">
-                register
-            </button>
-        </li>
+            <ul class="menu">
+                <li>home</li>
+                <li>destinos</li>
+                <li>about</li>
+                <li>
+                    <button class="btn-login">
+                        login
+                    </button>
+                    <button class="btn-register">
+                        register
+                    </button>
+                </li>
 
-        <li>
-        <label for="check" class="hide-menu-btn">
-            <i class="fas fa-times"></i>
-        </label>
-        </li>
-    </ul>
+                <li>
+                    <label for="check" class="hide-menu-btn">
+                        <i class="fas fa-times"></i>
+                    </label>
+                </li>
+            </ul>
 
-</nav>
-<header>
-<div class="header content">
-    <h1>explora y viaja</h1>
-    <label>buscador de sitios</label>
-    <input type="text"
-    placeholder="ingrese un sitio"
-    >
-    <button id="btn-search">
-        Explorar
-    </button>
-</div>
-<div class="header-img">
-    <img src="./assets/images/img1.png" alt="img header">
-</div>
-</header>
-<section class="section container">
-    <div>
-        <!-- ** Aca va la imagen -->
-        <img width="450" src="./assets/images/img2.png" alt="img-section-2">
-      </div>
-      <div>
-        <!-- ** Aca va ir el texto -->
-        <h1 class="mb-30">
-          A new way to explore the world
-        </h1>
-        <p class="section-p mb-30">
-          For decades travellers have reached for Lonely Planet books when looking to plan and execute their perfect 
-          trip, but now, they can also let Lonely Planet Experiences lead the way
-        </p>
-        <button class="btn-register">Learn more</button>
-      </div>
-    </section>
-    <section>
-        <!-- cards -->
-        <div class="section-title-card">
-<h2>featured destinations</h2>
-<a href="#" class="btn-link">view all</a>
-        </div>
-        <div class="section cards">
-
-            <img class=img-card src="./assets/images/ushuaia.jpg" alt="Cusco">
-            <div class="place">
-                <h4>Raja Ampat</h4>
-                <p>Indonesia</p>
-
+        </nav>
+        <header>
+            <div class="header content">
+                <h1>explora y viaja</h1>
+                <label>buscador de sitios</label>
+                <input type="text" placeholder="ingrese un sitio">
+                <button id="btn-search">
+                    Explorar
+                </button>
             </div>
-            <p>nombre</p>
-        </div>
+            <div class="header-img">
+                <img src="./assets/images/img1.png" alt="img header">
+            </div>
+        </header>
+        <section class="section container">
+            <div>
+                <!-- ** Aca va la imagen -->
+                <img width="450" src="./assets/images/img2.png" alt="img-section-2">
+            </div>
+            <div>
+                <!-- ** Aca va ir el texto -->
+                <h1 class="mb-30">
+                    A new way to explore the world
+                </h1>
+                <p class="section-p mb-30">
+                    For decades travellers have reached for Lonely Planet books when looking to plan and execute their
+                    perfect
+                    trip, but now, they can also let Lonely Planet Experiences lead the way
+                </p>
+                <button class="btn-register">Learn more</button>
+            </div>
+        </section>
+        <section>
+            <!-- cards -->
+            <section>
+                <div class="section-title-card">
+                    <h2>Featured destinations</h2>
+                    <a href="#" class="btn-link">View All</a>
+                </div>
+                <div class="section-cards">
+                    <div class="card">
+                        <img class="img-card" src="./assets/images/ushuaia.jpg" alt="Cusco" />
+                        <div class="place">
+                            <h4>Raja Ampat </h4>
+                            <p>Indonesia</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="img-card" src="./assets/images/antartida.png" alt="Cusco" />
+                        <div class="place">
+                            <h4>Raja Ampat </h4>
+                            <p>Indonesia</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="img-card" src="./assets/images/Cusco.jpg" alt="Cusco" />
+                        <div class="place">
+                            <h4>Raja Ampat </h4>
+                            <p>Indonesia</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="img-card" src="./assets/images/izu.jpg" alt="Cusco" />
+                        <div class="place">
+                            <h4>Raja Ampat </h4>
+                            <p>Indonesia</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-container mb-30">
+                <div>
+                
+                  <!-- ** Aca va la imagen -->
+                  <img width="450" src="./assets/img/img2.png" alt="img-section-2">
+                </div>
+                <div>
+                  <!-- ** Aca va ir el texto -->
+                  <h2 class="mb-30">
+                    A new way to explore the world
+                  </h2>
+                  <p class="section-p mb-30">
+                    For decades travellers have reached for Lonely Planet books when looking to plan and execute their perfect 
+                    trip, but now, they can also let Lonely Planet Experiences lead the way
+                  </p>
+                  <button class="btn-register">Learn more</button>
+                </div>
+              </section>
+              <section>
+                  <div>
+                      <h2>testimonials</h2>
+                      <div class="mb-30"
+                      <i class="fa fa-star start-checked"></i>
+                      <i class="fa fa-star start-checked"></i>
+                      <i class="fa fa-star start-checked"></i>
+                      <i class="fa fa-star start-checked"></i>
+                      <i class="fa fa-star start-checked"></i>
+                      <i class="fa fa-star start-checked"></i>
+                    </div>
+                    <p class="section-p mb-30">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione quis ad, voluptatum ipsum recusandae.
+                    </p>
+                    <h4>Roberto Merino</h4>
+                      <p class="sub-title">Marketing consultant</p>
+                </div>
+                <div>
+                      <img width="410"
+                </div>
 
-        <div class="card">
-            <img class=img-card src="./assets/images/antartida.png" alt="Cusco">
-    
-            <p>nombre</p>
-        </div>
+              </section>
+              <section>
 
-        <div class="card">
-            <img class=img-card src="./assets/images/Cusco.jpg" alt="Cusco">
-    <p>nombre</p>
+              </section>
+    </div>
+    <footer>
+        <div>
+            <p></p>
+            
+            <p></p>
         </div>
-
-        <div class="card">
-            <img class=img-card src="./assets/images/izu.jpg" alt="Cusco">
-    <p>nombre</p>
-        </div>
-        </div>
-    </section>
-  </div>
+    </footer>
 </body>
+
 </html>
