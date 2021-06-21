@@ -1,0 +1,57 @@
+*{
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contenedor{
+    border: 2px solid red;
+    display: grid;
+
+    /* grid-template-columns: 200px 200px 200px; en vez de esto se usa fr que significa fraccion*/
+
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid-template-columns: repeat(5,200px); */
+    /* repeat solo se usa cuando las medidas son iguales y se puede combinar con minmax*/
+    grid-template-columns: repeat(3, minmax(150px,300px));
+
+
+    /* grid-template-columns: minmax(100px,1fr) minmax(100px,1fr) minmax(100px,1fr); */
+
+    /* grid-template-columns: minmax(100px,200px) minmax(100px,200px) minmax(100px,200px); */
+
+    /* con minmax hay limite en tamaño minimo, pero si está solo con fr no. formula de minmax: minmax(100px,1fr) */
+    /* 1fr representa una division de espacio libre, solo se aplica al padre, sirve para que no queden espacios libres */
+    /* como sacar cuanto vale cada fr? ancho del papa entre el nro de fr */
+    /* FR SIGNIFICA FRACCIÓN */
+
+    grid-template-rows:  150px 150px 150px;
+    gap:10px;
+    /* se puede hacer asi: gap: 40px; o con column gap o row gap */
+
+    /* estas columnas y filas no aplican cuando defines tamaños con nth of type */
+    grid-auto-columns:250px;
+    grid-auto-rows: 100px;
+    /* gap es un espaciado entre columnas y filas */
+    /* con grid columns y grid rows se le da un espaciado a las columnas y otro a las filas */
+}
+
+.item{
+    border: 2px solid blue;
+}
+
+.item:nth-of-type(1){
+    /* grid-column-start: 1;
+    grid-column-end: 3;
+
+    grid-row-start: 1;
+    grid-row-end: 3; */
+
+    /* de esta manera se aplica lo mismo de arriba pero mas resumido: */
+
+    grid-column:1/3;
+    grid-row: 1/3;
+}
+
+.item:nth-of-type(4){
+    grid-column: 1/4;
+}
