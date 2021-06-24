@@ -1,21 +1,21 @@
 console.log("hola mundo");
 
-console.warn("te advierto")
+console.warn("te advierto");
 
-console error("algo ha pasado")
+console.error('algo ha pasado');
 
-// variables   
+// var es igual a variables   
 // string - es texto
-var nombre  = Roberto;
+var nombre  = "Roberto";
 
-console.log(nombre)
+console.log(nombre);
 
-// number - para operaciones aritméticas
-var edad = 30;
-
-// cuando demos una variable el tipo de dato sera definido por el visualViewport, en este caso "30"
+//Number - para operaciones aritméticas
+var edad = 39;
 
 console.log(typeof edad);
+
+// cuando demos una variable el tipo de dato sera definido por el visualViewport, en este caso "39"
 
 // boolean - lógicas
 var esdenoche = false;
@@ -24,7 +24,7 @@ console.log(esdenoche);
 
 var mequiere =true;
 
-console.log(mequiere);
+console.log(meQuiere);
 
 // tipo de datos raros
 // undefined
@@ -36,14 +36,15 @@ var nulo=null;
 
 console.log(nulo)
 
-ver rareza = "1000/patatas"
+var rareza = 1000/"patatas"
 
 console.log(rareza)
 
 // "Nan" significa "not a number"
 
-let edadperro =15;
+// let es más seguro, var trae problemas
 
+let edadperro = 15;
 
 // si quiero que edadperro tenga otro valor lo puedo referenciar por ejm:
 
