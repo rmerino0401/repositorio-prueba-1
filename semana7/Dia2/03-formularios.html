@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <main class="container">
+        <div class="row">
+            <div class="col-12">
+                <form>
+                <!-- para cada label c/input los envolveremos con un div -->
+                <!-- MODIFICADORES -->
+                <!-- m - margin y p - padding que manejaran medidas ya definidas ej. m4 -->
+                <!-- b - bottom, t -top, s  izquierda, e - derecha, x - costados, y - arriba y abajo  -->
+
+                    <div class="mb-3">
+                        <label class="form-label" for="curso">
+                            nombre del curso
+                        </label>
+                        <input type="text" class="form-control"placeholder="Ej.Next.js">
+                        <small class="form-text">Como minimo 10 caracteres</small>                    
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">seleccione nivel</label>
+                        <select id="nivel" class="form-select">
+                            <option value="1" class="form-select">Basico</option>
+                            <option value="2" class="form-select">Intermedio</option>
+                            <option value="3" class="form-select">Avanzado</option>
+                        </select>
+
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input">
+                            <label for="" class="form-check-label">Agregar material </label>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input">
+                            <label for="" class="form-check-label">Añadir envío</label>
+                        </div>
+                        <div class="mb-3 form-check-inline">
+                            <input type="radio" id="lima" name="sede" class="form-check-input">
+                            <label for="Lima" class="form-check-label">sede Lima</label>
+                        </div>
+                        <div class="mb-3 form-check-inline">
+                            <input type="radio" id="arequipa" name="sede" class="form-check-input">
+                            <label for="arequipa" class="form-check-label">sede Arequipa</label>
+                        </div>
+                        <div class="mb-3 form-check-inline">
+                            <input type="radio" id="Trujillo" name="sede" class="form-check-input">
+                            <label for="Trujillo" class="form-check-label">sede Trujillo</label>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="" class="form-label">
+                                    Camtidad de horas
+                                </label>
+                                <input type="number" class="form-control">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="" class="form-label">
+                                        Cantidad de modulos
+                                    </label>
+                                    <input type="number" class="form-control">
+                                </div>
+                        </div>
+                        <div class="d-grid">
+                            <button class="btn btn-primary">
+                                crear curso
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
