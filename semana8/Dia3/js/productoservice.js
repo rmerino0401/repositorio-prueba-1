@@ -1,24 +1,37 @@
-// este archivo nos va a servir para manejar las peticiones dentro de nuestra aplicación.
+//Este archivo nos va a servir para manejar las peticiones dentro de nuestra aplicación.
 const URL = "https://60f60de618254c00176e0106.mockapi.io/productos"
 
 const obtenerProductos = () => {
-    return new Promise((resolve,reject) => {
-        // aqui va el codigo asincrono (que demora) en este caso va a demorar a fetch
+    return new Promise((resolve, reject) => {
+        //el codigo asíncrono
         fetch(URL)
         .then((respuesta) => {
-            return respuesta.json() //aqui tengo la rpta con el status
+            return respuesta.json() //tengo la rpta con el status
         })
         .then((productosObtenidos) => {
-            resolve(productosObtenidos) //aqui tengo la dataya en javascript
+            resolve(productosObtenidos) //tengo la data ya en JS
         })
-        .catch(error => reject(error)) //esto se activa en caso de error
+        .catch(error => reject(error)) //en caso de error
     })
 }
 
-export {
-    obtenerProductos()
-    .then(productos => {
-        console.log(productos)
+const crearProducto = (ObjProducto) => {
+    const configuracion = {
+        method: "POST"
+        body: JSON.stringify(objProducto),
+        headers: {"content-type": "application/json"}
     }
+    try{
+        const respuesta = await fetch(URL, configuracion)
+        const data = await respuesta.json()
+        return data // esto será equivalente a resolve
+    } catch (error) {
+        throw error
+    }
+
 }
-getProductos()
+
+export {
+    obtenerProductos,
+    crearProducto
+}
