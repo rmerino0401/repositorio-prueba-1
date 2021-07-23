@@ -8,30 +8,70 @@ const obtenerProductos = () => {
         .then((respuesta) => {
             return respuesta.json() //tengo la rpta con el status
         })
-        .then((productosObtenidos) => {
+        .then(productosObtenidos => {
             resolve(productosObtenidos) //tengo la data ya en JS
         })
         .catch(error => reject(error)) //en caso de error
     })
 }
 
-const crearProducto = (ObjProducto) => {
+const crearProducto = async (objProducto) => {
     const configuracion = {
-        method: "POST"
-        body: JSON.stringify(objProducto),
-        headers: {"content-type": "application/json"}
+        method:'POST',
+        body:JSON.stringify(objProducto),
+        headers:{'Content-Type':'application/json'}
     }
-    try{
+
+    try {
         const respuesta = await fetch(URL, configuracion)
         const data = await respuesta.json()
-        return data // esto será equivalente a resolve
+        return data //resolve
     } catch (error) {
         throw error
     }
-
 }
 
+const eliminarProducto = async (id) => {
+    const configuracion = {
+        method:'DELETE'
+    }
+    try {
+        await fetch(`${URL}/${id}`, configuracion)
+        return "Eliminado"
+    } catch (error) {
+        throw error
+    }
+}
+
+const obtenerProductoPorId = async (id) => {
+    try {
+        const respuesta = await fetch(`${URL}/${id}`)
+        const producto = await respuesta.json()
+        return producto
+    } catch (error) {
+        throw error
+    }
+}
+
+const actualizarProducto = (objProducto) => {
+    const configuracion = {
+        method: 'PUT',
+        body: JSON.stringify(objProducto),
+        headers: {'content-type': 'application/json'}
+    }
+
+    try {
+        const respuesta =  await fetch(`${URL}/${objProducto.prod_id}`, configuracion)
+        const productoActualizado= await respuesta.json()
+        return productoActualizado
+    }catch (error) {
+        throw error
+    }
+}
 export {
     obtenerProductos,
-    crearProducto
+    crearProducto,
+    eliminarProducto,
+    obtenerProductoPorId,
+    actualizarProducto
 }
