@@ -1,18 +1,42 @@
-
+import {useState} from 'react'
+import Footer from './components/Footer'
+import ListaTareas from './components/ListaTareas'
 
 export default function App() {
-  let titulo = "Mi App2"
+  // const [estado, funcdelestado] = useState(estadoinicial)
+const [tareas, setTareas] = useState(["pasear al perro"])
+const [texto, setTexto] = useState("ordenar")
 
-  return (
+const anadirTarea = () => {
+  setTareas([...tareas, texto])
+}
+
+const manejarTexto = (nuevoTexto) => {
+  setTexto(nuevoTexto)
+}
+
+const miTitulo = "mi App"
+
+return (
     <div>
-      <h1>{titulo}</h1>
-
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, obcaecati odit voluptate consectetur dignissimos ea praesentium qui illo impedit harum, id nobis placeat nisi neque soluta, alias omnis sed aliquid?
-      </p>
+      <h1>{miTitulo}</h1>
+      {/* <ul>
+        {tareas.map((tar, indice) => (
+          <li key={indice}>{tar}</li>
+        ))}
+      </ul> */}
+      <ListaTareas tareas={tareas} />
       <hr/>
-      <br/>
+
+      <input type="text" value={texto} onChange={(e) => {manejarTexto(e.target.value)}} />
+       {/*value va a ser lo que tenemos escrito  */}
+
+      <button onClick={anadirTarea}>
+      Anadir Tarea
+      </button>
+      <Footer mensaje={"Empresa1"}/>
+      <Footer mensaje={"Empresa2"}/>
+      
     </div>
-    )
-    // jsx siempre sera entre parentesis como lo que vemos arriba
-  // toda etiqueta que se use en jsx debe estar cerrada
+  )
 }
