@@ -1,6 +1,7 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import Footer from './components/Footer'
 import ListaTareas from './components/ListaTareas'
+import inputTarea from './components/inputTarea'
 
 export default function App() {
   // const [estado, funcdelestado] = useState(estadoinicial)
@@ -15,28 +16,34 @@ const manejarTexto = (nuevoTexto) => {
   setTexto(nuevoTexto)
 }
 
+const eliminarTarea = (indice) => {
+  // console.log(indice)
+  // crear un arregloTmp por spread operator
+  let tareasTmp = [...tareas]
+  // elimino un item a partir del item que reciba
+  tareasTmp.splice(indice, 1)
+  // ya con el item eliminado en mi temporal, actuaizo el estado
+  setTareas(tareasTmp)  
+}
+
 const miTitulo = "mi App"
+
+useEffect(() => {
+  
+})
 
 return (
     <div>
       <h1>{miTitulo}</h1>
-      {/* <ul>
-        {tareas.map((tar, indice) => (
-          <li key={indice}>{tar}</li>
-        ))}
-      </ul> */}
-      <ListaTareas tareas={tareas} />
+      <ListaTareas tareas={tareas} eliminarTarea={eliminarTarea}/>
       <hr/>
-
-      <input type="text" value={texto} onChange={(e) => {manejarTexto(e.target.value)}} />
-       {/*value va a ser lo que tenemos escrito  */}
-
-      <button onClick={anadirTarea}>
-      Anadir Tarea
-      </button>
+      <InputTarea 
+        texto={texto} 
+        manejarTexto={manejarTexto}
+        anadirTarea={anadirTarea}
+      />
       <Footer mensaje={"Empresa1"}/>
       <Footer mensaje={"Empresa2"}/>
-      
     </div>
   )
 }

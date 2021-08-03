@@ -3,7 +3,7 @@ export default function ListaTareas(props) {
         <ul>
             {props.tareas.map((tar, i) => (
                 <li key={i}>
-                {tar} <button onClick={() => {props.eliminarTarea(i)}} >X</button>
+                    {tar} <button onClick={() => {props.eliminarTarea(i)}}>X</button>
                 </li>
             ))}
         </ul>
