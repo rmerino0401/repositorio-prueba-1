@@ -1,8 +1,15 @@
 
-export default function formProducto() {
-    return (
+export default function FormProducto({
+    value,
+    actualizarInput,
+    manejarSubmit
+}) {
+ 
+ 
+   return (
         <div>
-            <form>
+            <form onSubmit={(e) =>{manejarSubmit(e)}
+        }>
                 <div className="mb-3">
                 <label className="form-label">
                     Nombre Producto
@@ -11,6 +18,8 @@ export default function formProducto() {
                 type="text"
                 className="form-control"
                 name="prod_nombre"
+                value={value.prod_nombre}
+                        onChange={(e) => {actualizarInput(e)}}
                 />
                 </div>
 
@@ -22,6 +31,8 @@ export default function formProducto() {
                 type="text"
                 className="form-control"
                 name="prod_descripcion"
+                value={value.prod_descripcion}
+                        onChange={(e) => {actualizarInput(e)}}
                 />
                 </div>
 
@@ -33,6 +44,8 @@ export default function formProducto() {
                 type="number"
                 className="form-control"
                 name="prod_precio"
+                value={value.prod_precio}
+                        onChange={(e) => {actualizarInput(e)}}
                 />
                 </div>
 
@@ -44,6 +57,8 @@ export default function formProducto() {
                 type="number"
                 className="form-control"
                 name="prod_stock"
+                value={value.prod_stock}
+                        onChange={(e) => {actualizarInput(e)}}
                 />
                 </div>
 
@@ -55,10 +70,17 @@ export default function formProducto() {
                 type="checkbox"
                 className="form-check-input"
                 name="prod_oferta"
+                value={value.prod_oferta}
+                        onChange={(e) => {actualizarInput(e)}}
                 />
                 <label className="form-check-label">
                     Ofertar producto
                 </label>
+                </div>
+                <div className="d-grid">
+                <button className="btn btn-primary btn-lg" type="submit">
+                    Guardar
+                </button>
                 </div>
             </form>
         </div>
