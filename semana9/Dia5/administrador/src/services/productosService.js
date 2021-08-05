@@ -1,4 +1,5 @@
 import axios from "axios"
+import {storage} from "../config/Firebase"
 
 const URL = `${process.env.REACT_APP_API}proyecto-admnistrador`
 
@@ -46,9 +47,29 @@ const editarProducto = async (productoEditado,id) => {
     }
 }
 
+const subirArchivo = (imagen) => {
+    return new Promise((resolve,reject) => {
+        let refStorage = storage.ref(`fotos/${imagen.name}`)
+        let tareaSubir = refStorage.put(imagen)
+
+        tareaSubir.on("state_changed",
+        () => {},
+        (error) => {reject(error)},
+         () => {
+            tareaSubir.snapshot.ref.getDownloadURL()
+            .then((urlImagen)=> {
+                resolve(urlImagen)
+            })
+        }
+        )
+    })
+}
+
 export {
     obtenerProductos,
     crearProducto,
     obtenerProductoPorId,
-    editarProducto
+    editarProducto,
+    subirArchivo
+
 }

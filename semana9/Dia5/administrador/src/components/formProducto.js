@@ -1,11 +1,16 @@
+import {useRef} from "react"
 
 export default function FormProducto({
     value,
     actualizarInput,
-    manejarSubmit
+    manejarSubmit,
+    manejarImagen
 }) {
  
+ const inputFile = useRef()
  
+
+
    return (
         <div>
             <form onSubmit={(e) =>{manejarSubmit(e)}
@@ -77,6 +82,18 @@ export default function FormProducto({
                     Ofertar producto
                 </label>
                 </div>
+
+                <div className="mb-3">
+                    <label className="form-label">imagen</label>
+                <input
+                type="file"
+                className="form-control"
+                ref={inputFile}
+                onChange={(e) => {manejarImagen(e)}}
+                 />
+                </div>
+
+
                 <div className="d-grid">
                 <button className="btn btn-primary btn-lg" type="submit">
                     Guardar
