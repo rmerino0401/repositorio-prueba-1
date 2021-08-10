@@ -1,13 +1,21 @@
-import {useState, useEffect} from 'react'
+import {useState, useEffect, useContext} from 'react'
+import { CarritoContext } from '../context/carritoContext'
 import {useParams} from "react-router-dom"
 import { obtenerProductoPorId } from '../services/productosService'
 import Loading from '../components/Loading'
+import Swal from "sweetalert2"
+import { useHistory } from 'react-router'
 
 export default function ProductoView() {
     const [producto, setProducto] = useState({})
     const [cargando, setCargando] = useState(true)
 
     const { id } = useParams()
+    //useContext me permite acceder a lo que compartimos en el context, pero necesita la referencia al contexto
+
+    const history = useHistory()
+
+    const {anadirACarrito} = useContext(CarritoContext)
 
     const getProducto = async () => {
         try {
@@ -16,6 +24,23 @@ export default function ProductoView() {
             setCargando(false)
         } catch (error) {
             console.error(error)
+        }
+    }
+
+    const anadirACarritoContext = async() => {
+        anadirACarrito(producto)
+        const resultado = await Swal.fire({
+            icon:'success',
+            title:"Producto añadido!",
+            showConfirmButton:true,
+            showDenyButton:true,
+            confirmButtonText:'Seguir comprando',
+            denyButtonText:'Ir a carrito'
+        })
+        if(resultado.isConfirmed){
+            history.push('/')
+        }else if(resultado.isDenied){
+            history.push('/carrito')
         }
     }
 
@@ -45,6 +70,14 @@ export default function ProductoView() {
                                 <span className="fw-bold">
                                     S/ {producto.prod_precio}
                                 </span>
+
+                                <button 
+                                    className="btn btn-dark btn-lg"
+                                    onClick={anadirACarritoContext}
+                                >
+                                    <i className="fas fa-shopping-cart me-2"/>
+                                    Añadir a Carrito
+                                </button>
                             </div>
                         </div>
                     </div>
